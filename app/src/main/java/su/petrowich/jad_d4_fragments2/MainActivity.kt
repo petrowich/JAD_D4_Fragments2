@@ -10,10 +10,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //кароче, нихрена у меня не получилось сделать по-науке
-        //сделал всё старым добрым полиморфизмом
 
         val fragmentShow = FragmentShow()
-        val fragmentControl = FragmentControl(fragmentShow) //сцылку на управляемый фрагмент тупо передаю в конструктор
+        val fragmentControl = FragmentControl(fragmentShow) //сцылку на управляемый фрагмент тупо передаю через конструктор
 
         if (savedInstanceState == null) {
             var fragmentControlTransition = supportFragmentManager.beginTransaction()
